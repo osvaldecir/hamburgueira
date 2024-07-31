@@ -47,14 +47,34 @@ cart.push({
     price,
     quantity: 1,
 })
-
-updatCartModal1(){
-
-
-}
-function updatCartModal1(){
-
+upadateCartModal()
 }
 
+function upadateCartModal(){
+    castItemContainer.innerHTML = "";
+    let total = 0;
 
+    cart.forEach(item =>{
+       const cartItemElemente = document.createElement("div");
+
+       cartItemElemente.innerHTML`
+       <div>
+
+       <div>
+       <p>${item.mame}</P>
+       <p>${item.quantity}</P>
+       <p>R$ ${item.price}
+       <div>
+
+       <div>
+       <button>
+            Remover
+       </button>
+       </div>
+
+       <div>
+       
+       `
+        castItemContainer.appendChild(cartItemElemente)
+    })
 }
